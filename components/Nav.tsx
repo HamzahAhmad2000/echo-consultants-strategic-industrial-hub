@@ -19,12 +19,12 @@ const Nav: React.FC<NavProps> = ({ activePage, onNavigate }) => {
   return (
     <nav className="fixed top-0 w-full z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-32">
           <div className="flex-shrink-0 cursor-pointer" onClick={() => onNavigate(PageState.HOME)}>
             <img
               src="/assets/logotransparent.png"
               alt="Echo Consultants Logo"
-              className="h-20 w-auto"
+              className="h-40 w-auto"
             />
           </div>
 
@@ -35,8 +35,8 @@ const Nav: React.FC<NavProps> = ({ activePage, onNavigate }) => {
                   key={item.id}
                   onClick={() => onNavigate(item.id)}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${activePage === item.id
-                      ? 'text-echo-primary bg-echo-light'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                    ? 'text-echo-primary bg-echo-light'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                     }`}
                 >
                   {item.label}
@@ -67,8 +67,8 @@ const Nav: React.FC<NavProps> = ({ activePage, onNavigate }) => {
                   setIsOpen(false);
                 }}
                 className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium ${activePage === item.id
-                    ? 'text-echo-primary bg-echo-light'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                  ? 'text-echo-primary bg-echo-light'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                   }`}
               >
                 {item.label}

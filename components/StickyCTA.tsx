@@ -16,8 +16,8 @@ const StickyCTA: React.FC = () => {
 
   return (
     <>
-      <div className={`fixed bottom-6 right-6 z-40 transition-all duration-300 ${isOpen ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-100 scale-100 animate-bounce hover:animate-none'}`}>
-        <button 
+      <div className={`fixed bottom-6 right-6 z-40 transition-all duration-300 ${isOpen ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-100 scale-100 animate-pulse hover:animate-none'}`}>
+        <button
           onClick={() => setIsOpen(true)}
           className="flex items-center gap-2 bg-echo-primary hover:bg-echo-primaryHover text-white font-bold py-3 px-6 rounded-full shadow-lg shadow-emerald-500/30 transition-all transform hover:scale-105"
         >
@@ -28,13 +28,13 @@ const StickyCTA: React.FC = () => {
 
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
-          <div 
+          <div
             className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"
             onClick={() => setIsOpen(false)}
           />
-          
+
           <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 animate-fadeIn">
-            <button 
+            <button
               onClick={() => setIsOpen(false)}
               className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1 rounded-full hover:bg-slate-100 transition-colors"
             >
@@ -61,31 +61,31 @@ const StickyCTA: React.FC = () => {
               </a>
 
               <div className="p-4 rounded-xl border border-slate-200 hover:border-echo-primary hover:bg-echo-light group transition-all">
-                 <div className="flex items-center mb-4">
-                    <div className="bg-slate-100 p-3 rounded-lg group-hover:bg-white text-slate-600 group-hover:text-echo-primary transition-colors mr-4">
-                      <Mail className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Email Us</p>
-                      <p className="text-sm font-medium text-slate-900 break-all">{email}</p>
-                    </div>
-                 </div>
-                 
-                 <div className="flex gap-3">
-                    <a 
-                      href={`mailto:${email}`}
-                      className="flex-1 bg-echo-primary hover:bg-echo-primaryHover text-white font-bold py-2 px-4 rounded-lg text-center transition-colors shadow-sm"
-                    >
-                      Open Mail
-                    </a>
-                    <button 
-                      onClick={handleCopy}
-                      className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium transition-colors shadow-sm"
-                    >
-                      {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
-                      {copied ? 'Copied' : 'Copy'}
-                    </button>
-                 </div>
+                <div className="flex items-center mb-4">
+                  <div className="bg-slate-100 p-3 rounded-lg group-hover:bg-white text-slate-600 group-hover:text-echo-primary transition-colors mr-4">
+                    <Mail className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Email Us</p>
+                    <p className="text-sm font-medium text-slate-900 break-all">{email}</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-3">
+                  <a
+                    href={`mailto:${email}`}
+                    className="flex-1 bg-echo-primary hover:bg-echo-primaryHover text-white font-bold py-2 px-4 rounded-lg text-center transition-colors shadow-sm"
+                  >
+                    Open Mail
+                  </a>
+                  <button
+                    onClick={handleCopy}
+                    className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium transition-colors shadow-sm"
+                  >
+                    {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
+                    {copied ? 'Copied' : 'Copy'}
+                  </button>
+                </div>
               </div>
             </div>
 

@@ -31,7 +31,7 @@ const App: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-echo-primary selection:text-white">
       <Nav activePage={activePage} onNavigate={setActivePage} />
-      <main className="flex-grow pt-20">
+      <main className="flex-grow pt-36">
         {renderContent()}
       </main>
       <StickyCTA />
