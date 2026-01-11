@@ -73,19 +73,30 @@ const SteelMill: React.FC = () => {
               <span className="text-blue-500 font-mono text-sm tracking-widest uppercase font-bold">Infrastructure Backbone</span>
               <h2 className="text-3xl font-bold text-slate-900 mt-1">Integrated Steel Ecosystem</h2>
               <p className="text-slate-600 mt-2">Concept: Mine-to-Product (Ore → Beneficiation → DRI → Refining)</p>
+              <p className="text-sm text-slate-500 mt-1">License Area: EL-384 | 32-56% Iron Ore Grade</p>
             </div>
             <div className="mt-4 md:mt-0 flex gap-4">
+               <div className="bg-white p-3 rounded-lg border border-slate-200 shadow-sm text-center">
+                  <span className="block text-xs text-slate-500 uppercase">Analysis By</span>
+                  <span className="block font-bold text-slate-900">Robertson Research (UK)</span>
+               </div>
               <DataCard label="Target Output" value="5M" subtext="Tons/Year" highlight size="md" />
-              <DataCard label="Ore Grade" value="32-56%" subtext="Iron Ore" size="md" />
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            {['High-Tensile (Pipelines)', 'Alloy/Stainless (Defense)', 'Automotive Grades'].map((grade, i) => (
-              <div key={i} className="bg-white p-3 rounded border border-slate-200 text-center text-slate-600 text-sm font-semibold shadow-sm">
-                {grade}
-              </div>
-            ))}
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h3 className="font-bold text-slate-900 mb-2">High-Tensile Strength</h3>
+                <p className="text-sm text-slate-600">Pipelines and transmission lines critical to energy infrastructure.</p>
+            </div>
+             <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h3 className="font-bold text-slate-900 mb-2">Alloy & Stainless Steel</h3>
+                <p className="text-sm text-slate-600">Weapon systems, shipbuilding, and precision machine tools.</p>
+            </div>
+             <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h3 className="font-bold text-slate-900 mb-2">Specialized Grades</h3>
+                <p className="text-sm text-slate-600">Automotive, defense, and energy sectors.</p>
+            </div>
           </div>
 
           <PhaseToggle phases={STEEL_PHASES} activeIndex={activeSteelPhase} setActiveIndex={setActiveSteelPhase} />

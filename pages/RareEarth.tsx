@@ -73,10 +73,19 @@ const RareEarth: React.FC = () => {
               <span className="text-echo-primary font-mono text-sm tracking-widest uppercase font-bold">Critical Minerals</span>
               <h2 className="text-3xl font-bold text-slate-900 mt-1">The Tangir REE Project</h2>
               <p className="text-slate-600 mt-2">Gilgit-Baltistan | Lease Area: 256 sq. km</p>
+              <p className="text-sm text-slate-500 mt-1 font-medium">Partnership: Echo Consultants & Apex Energy Ltd</p>
             </div>
             <div className="mt-4 md:mt-0 flex gap-4">
-              <DataCard label="REE Content" value="25%" subtext="vs 5-7% Global Avg" highlight size="md" />
+              <DataCard label="Tangir Site" value="25%" subtext="REE Content" highlight size="md" />
+              <DataCard label="Global Avg" value="5-7%" subtext="REE Content" size="md" />
             </div>
+          </div>
+
+          <div className="mb-8 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
+              <h3 className="text-md font-bold text-slate-900 mb-2">The Tangir Advantage</h3>
+              <p className="text-slate-600 text-sm">
+                  Significantly superior REE content (25%) compared to the global average (5-7%), leading to higher recovery rates and lower processing costs per ton.
+              </p>
           </div>
 
           <PhaseToggle phases={REE_PHASES} activeIndex={activeReePhase} setActiveIndex={setActiveReePhase} />
