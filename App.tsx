@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import StickyCTA from './components/StickyCTA';
+import PlacerGold from './pages/PlacerGold';
+import Cannabis from './pages/Cannabis';
+import Saffron from './pages/Saffron';
+import Aris from './pages/Aris';
+import SteelMill from './pages/SteelMill';
+import RareEarth from './pages/RareEarth';
 import Home from './pages/Home';
-import Industrial from './pages/Industrial';
-import Yield from './pages/Yield';
 import { PageState } from './types';
 
 const App: React.FC = () => {
@@ -19,10 +23,18 @@ const App: React.FC = () => {
     switch (activePage) {
       case PageState.HOME:
         return <Home onNavigate={setActivePage} />;
-      case PageState.INDUSTRIAL:
-        return <Industrial />;
-      case PageState.YIELD:
-        return <Yield />;
+      case PageState.PLACER_GOLD:
+        return <PlacerGold />;
+      case PageState.CANNABIS:
+        return <Cannabis />;
+      case PageState.SAFFRON:
+        return <Saffron />;
+      case PageState.ARIS:
+        return <Aris />;
+      case PageState.STEEL_MILL:
+        return <SteelMill />;
+      case PageState.REE:
+        return <RareEarth />;
       default:
         return <Home onNavigate={setActivePage} />;
     }

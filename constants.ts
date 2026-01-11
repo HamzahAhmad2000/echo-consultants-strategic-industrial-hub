@@ -3,6 +3,16 @@ import { Metric, ProjectData, ProjectPhase } from './types';
 // Page 1: Home Dashboard Metrics
 export const PILLARS_METRICS: ProjectData[] = [
   {
+    id: 'gold',
+    title: 'Placer Gold',
+    subtitle: 'Rapid Return',
+    description: 'Indigenous harvesting model with rapid cash flow.',
+    metrics: [
+      { label: 'Total ROI', value: '274%', highlight: true },
+      { label: 'Breakeven', value: 'Low' },
+    ]
+  },
+  {
     id: 'ree',
     title: 'Rare Earth Elements',
     subtitle: 'Strategic Sovereignty',
@@ -30,16 +40,6 @@ export const PILLARS_METRICS: ProjectData[] = [
     metrics: [
       { label: 'Demand', value: '$33B', subtext: 'by 2033' },
       { label: 'Targets', value: 'Zhob/Muslim Bagh' },
-    ]
-  },
-  {
-    id: 'gold',
-    title: 'Placer Gold',
-    subtitle: 'Rapid Return',
-    description: 'Indigenous harvesting model with rapid cash flow.',
-    metrics: [
-      { label: 'Total ROI', value: '274%', highlight: true },
-      { label: 'Breakeven', value: 'Low' },
     ]
   }
 ];
@@ -127,4 +127,51 @@ export const SAFFRON_STEPS = [
     title: 'Preservation',
     desc: 'Immediate airtight glass storage to retain volatile oils.',
   }
+];
+
+// CCRA: Cannabis Control & Regulatory Authority Data
+export const CCRA_FDI_PIPELINE = [
+  { investor: 'Health House International (Chanelle McCoy)', amount: '$50 Million', status: 'Pending Policy' },
+  { investor: 'Denim Sector Investors', amount: '$100 Million', status: 'Pending Policy' },
+  { investor: 'Citi Pharma', amount: 'Ready for Entry', status: 'Leading Medicinal License' },
+  { investor: 'Fauji Foundation', amount: 'Strategic Investment', status: 'International Partners Ready' },
+];
+
+export const CCRA_INDUSTRY_ASSOCIATIONS = [
+  { name: 'PPMA', readiness: 'Ready for medicinal and industrial alignment' },
+  { name: 'APTMA', readiness: 'Ready to replace Chinese hemp with Pakistani production' },
+];
+
+export const CCRA_CELADON_TARGETS = [
+  { formulation: 'Endometriosis Treatment', description: 'Using Celadon IP to treat 20 million Pakistani women' },
+  { formulation: 'Delta 9 (D9) for CINV', description: 'Semi-synthetic cannabinoid for Chemotherapy-Induced Nausea and Vomiting' },
+];
+
+export const CCRA_CELADON_STEPS = [
+  { step: 'Regulatory Consultation', desc: 'Discuss vision with key bodies to align with national priorities' },
+  { step: 'Partner Identification', desc: 'Work with regulators to select a pharmaceutical company with national distribution' },
+  { step: 'Study Design', desc: 'Finalize scope for endometriosis and D9 observational study' },
+];
+
+export const CCRA_PRODUCTION_OUTPUT = [
+  { product: 'Flowers', quantity: '460 kg', perAcre: true },
+  { product: 'Dust / Garda', quantity: '12 kg', perAcre: true },
+  { product: 'Seeds', quantity: '125 kg', perAcre: true },
+  { product: 'Seed Oil', quantity: '12 kg', perAcre: true },
+  { product: 'Wood / Stalk', quantity: '384 kg', perAcre: true },
+  { product: 'Textile Yarn', quantity: '16 kg', perAcre: true },
+];
+
+export const CCRA_LOCAL_REVENUE = [
+  { item: 'Dust/Garda', revenue: '1.56M PKR' },
+  { item: 'Raw Seeds', revenue: '0.53M PKR' },
+  { item: 'Seed Oil', revenue: '0.06M PKR' },
+  { item: 'Yarn', revenue: '0.07M PKR' },
+];
+
+export const CCRA_OPEX_BREAKDOWN = [
+  { item: 'Crop Production', cost: '500,000 PKR' },
+  { item: 'Labour', cost: '15,000 PKR' },
+  { item: 'Transport (Farm → Peshawar)', cost: '40,000 PKR' },
+  { item: 'Transport (Peshawar → Karachi)', cost: '300,000 PKR' },
 ];

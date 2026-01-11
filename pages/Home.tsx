@@ -136,65 +136,65 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Resources & Downloads Section */}
+      {/* Projects Section */}
       <section className="py-20 bg-slate-50 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900">Resources & Documentation</h2>
-            <p className="text-slate-500 mt-2">Download our detailed project pitch decks and investment briefs.</p>
+            <h2 className="text-3xl font-bold text-slate-900">Featured Projects</h2>
+            <p className="text-slate-500 mt-2">Explore our detailed project briefs.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Gold Pitch Deck */}
-            <a
-              href="/assets/Indus-K_Placer_Gold_Pitch_Deck_Final.pdf"
-              download
-              className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-yellow-400 hover:shadow-xl hover:shadow-yellow-100 transition-all text-center"
+            {/* Gold Project */}
+            <button
+              onClick={() => onNavigate('PLACER_GOLD')}
+              className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-yellow-400 hover:shadow-xl hover:shadow-yellow-100 transition-all text-center cursor-pointer text-left w-full"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-yellow-50 text-yellow-600 mb-6 group-hover:scale-110 transition-transform">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><line x1="9" y1="15" x2="15" y2="15" /></svg>
+              <div className="flex flex-col items-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-yellow-50 text-yellow-600 mb-6 group-hover:scale-110 transition-transform">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><line x1="9" y1="15" x2="15" y2="15" /></svg>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Indus-K Gold Project</h3>
+                <p className="text-slate-600 mb-4">Placer Gold Details</p>
+                <span className="inline-flex items-center text-yellow-600 font-medium group-hover:underline">
+                  View Project
+                </span>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Indus-K Gold Project</h3>
-              <p className="text-slate-600 mb-4">Placer Gold Investment Pitch Deck</p>
-              <span className="inline-flex items-center text-yellow-600 font-medium group-hover:underline">
-                Download PDF
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
-              </span>
-            </a>
+            </button>
 
-            {/* PGM Pitch Deck */}
-            <a
-              href="/assets/Pakistan Platinum Group Metals Project.pdf"
-              download
-              className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-purple-400 hover:shadow-xl hover:shadow-purple-100 transition-all text-center"
+            {/* PGM / Aris */}
+            <button
+               onClick={() => onNavigate('ARIS')}
+              className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-purple-400 hover:shadow-xl hover:shadow-purple-100 transition-all text-center cursor-pointer w-full"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-50 text-purple-600 mb-6 group-hover:scale-110 transition-transform">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><line x1="9" y1="15" x2="15" y2="15" /></svg>
+              <div className="flex flex-col items-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-50 text-purple-600 mb-6 group-hover:scale-110 transition-transform">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><line x1="9" y1="15" x2="15" y2="15" /></svg>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Aris (PGM)</h3>
+                <p className="text-slate-600 mb-4">Platinum Group Metals details</p>
+                <span className="inline-flex items-center text-purple-600 font-medium group-hover:underline">
+                  View Project
+                </span>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Platinum Group Metals</h3>
-              <p className="text-slate-600 mb-4">PGM Exploration Project Brief</p>
-              <span className="inline-flex items-center text-purple-600 font-medium group-hover:underline">
-                Download PDF
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
-              </span>
-            </a>
+            </button>
 
-            {/* Steel Pitch Deck */}
-            <a
-              href="/assets/The Pakistan Integrated Steel Project.pdf"
-              download
-              className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-100 transition-all text-center"
+            {/* Steel Project */}
+            <button
+               onClick={() => onNavigate('STEEL_MILL')}
+              className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-100 transition-all text-center cursor-pointer w-full"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-50 text-blue-600 mb-6 group-hover:scale-110 transition-transform">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><line x1="9" y1="15" x2="15" y2="15" /></svg>
+              <div className="flex flex-col items-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-50 text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><line x1="9" y1="15" x2="15" y2="15" /></svg>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Integrated Steel</h3>
+                <p className="text-slate-600 mb-4">Steel Mill Ecosystem</p>
+                <span className="inline-flex items-center text-blue-600 font-medium group-hover:underline">
+                  View Project
+                </span>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Integrated Steel Project</h3>
-              <p className="text-slate-600 mb-4">National Steel Ecosystem Investment Brief</p>
-              <span className="inline-flex items-center text-blue-600 font-medium group-hover:underline">
-                Download PDF
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
-              </span>
-            </a>
+            </button>
           </div>
         </div>
       </section>

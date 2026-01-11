@@ -1,7 +1,11 @@
 export enum PageState {
   HOME = 'HOME',
-  INDUSTRIAL = 'INDUSTRIAL',
-  YIELD = 'YIELD',
+  PLACER_GOLD = 'PLACER_GOLD',
+  CANNABIS = 'CANNABIS',
+  SAFFRON = 'SAFFRON',
+  ARIS = 'ARIS',
+  STEEL_MILL = 'STEEL_MILL',
+  REE = 'REE',
 }
 
 export interface Metric {
