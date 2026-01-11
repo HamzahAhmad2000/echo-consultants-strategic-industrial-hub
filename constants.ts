@@ -1,6 +1,7 @@
 import { Metric, ProjectData, ProjectPhase } from './types';
 
 // Page 1: Home Dashboard Metrics
+// Page 1: Home Dashboard Metrics
 export const PILLARS_METRICS: ProjectData[] = [
   {
     id: 'gold',
@@ -8,18 +9,38 @@ export const PILLARS_METRICS: ProjectData[] = [
     subtitle: 'Rapid Return',
     description: 'Indigenous harvesting model with rapid cash flow.',
     metrics: [
-      { label: 'Total ROI', value: '274%', highlight: true },
-      { label: 'Breakeven', value: 'Low' },
+      { label: 'Total ROI', value: 'High', highlight: true },
+      { label: 'Breakeven', value: 'Rapid' },
     ]
   },
   {
-    id: 'ree',
-    title: 'Rare Earth Elements',
-    subtitle: 'Strategic Sovereignty',
-    description: '25% Grade Superiority vs 5-7% Global Average.',
+    id: 'cannabis',
+    title: 'Cannabis',
+    subtitle: 'Medicinal & Industrial',
+    description: 'State-backed framework for medicinal and industrial cannabis.',
     metrics: [
-      { label: 'Grade', value: '25%', highlight: true },
-      { label: 'Application', value: 'EVs & Defense' },
+      { label: 'Market', value: 'Global', highlight: true },
+      { label: 'Status', value: 'Policy Phase' },
+    ]
+  },
+  {
+    id: 'saffron',
+    title: 'Saffron',
+    subtitle: 'The Red Gold',
+    description: 'Precision harvesting of high-value Chitral Saffron.',
+    metrics: [
+      { label: 'Quality', value: 'Premium', highlight: true },
+      { label: 'Demand', value: 'High' },
+    ]
+  },
+  {
+    id: 'pgm',
+    title: 'Aris (PGM)',
+    subtitle: 'New Bushveld Frontier',
+    description: 'First-mover access to underexplored Ophiolite belts.',
+    metrics: [
+      { label: 'Demand', value: 'High', highlight: true },
+      { label: 'Targets', value: 'Zhob/Muslim Bagh' },
     ]
   },
   {
@@ -33,13 +54,13 @@ export const PILLARS_METRICS: ProjectData[] = [
     ]
   },
   {
-    id: 'pgm',
-    title: 'Platinum Group Metals',
-    subtitle: 'New Bushveld Frontier',
-    description: 'First-mover access to underexplored Ophiolite belts.',
+    id: 'ree',
+    title: 'Rare Earth Elements',
+    subtitle: 'Strategic Sovereignty',
+    description: '25% Grade Superiority vs 5-7% Global Average.',
     metrics: [
-      { label: 'Demand', value: '$33B', subtext: 'by 2033' },
-      { label: 'Targets', value: 'Zhob/Muslim Bagh' },
+      { label: 'Grade', value: '25%', highlight: true },
+      { label: 'Application', value: 'EVs & Defense' },
     ]
   }
 ];

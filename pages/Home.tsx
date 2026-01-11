@@ -42,13 +42,13 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* The Four Pillars Dashboard */}
+      {/* The Strategic Pillars Dashboard */}
       <section className="py-20 bg-slate-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-2">The Four Pillars</h2>
-              <p className="text-slate-500">Strategic Critical Materials & Financial Engines</p>
+              <h2 className="text-3xl font-bold text-slate-900 mb-2">Strategic Investment Pillars</h2>
+              <p className="text-slate-500">Critical Sectors & Financial Engines</p>
             </div>
             <div className="hidden md:block w-64 h-32">
               {/* Tiny viz for dashboard feel */}
@@ -66,7 +66,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {PILLARS_METRICS.map((pillar) => (
               <div key={pillar.id} className="group bg-white border border-slate-200 hover:border-echo-primary p-6 rounded-xl transition-all hover:shadow-xl hover:shadow-emerald-100">
                 <div className="flex justify-between items-start mb-4">
@@ -162,7 +162,41 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               </div>
             </button>
 
-            {/* PGM / Aris */}
+            {/* Cannabis Project */}
+            <button
+               onClick={() => onNavigate('CANNABIS')}
+              className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-green-400 hover:shadow-xl hover:shadow-green-100 transition-all text-center cursor-pointer w-full"
+            >
+              <div className="flex flex-col items-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-50 text-green-600 mb-6 group-hover:scale-110 transition-transform">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22v-8" /><path d="M5 10c0-6 7-6 7-6s7 0 7 6a6 6 0 0 1-6 6c-3 0-4-3-4-3s-1 3-4 3a6 6 0 0 1-6-6z" /><path d="M5 2c0 3 4 3 4 3s1-2 4-2c0 0 4 0 4 3" /></svg>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Cannabis (CCRA)</h3>
+                <p className="text-slate-600 mb-4">Medicinal & Industrial</p>
+                <span className="inline-flex items-center text-green-600 font-medium group-hover:underline">
+                  View Project
+                </span>
+              </div>
+            </button>
+
+            {/* Saffron Project */}
+            <button
+               onClick={() => onNavigate('SAFFRON')}
+              className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-red-400 hover:shadow-xl hover:shadow-red-100 transition-all text-center cursor-pointer w-full"
+            >
+              <div className="flex flex-col items-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-50 text-red-600 mb-6 group-hover:scale-110 transition-transform">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5-6 6-5-5-2 16a2 2 0 0 0 2 2h8" /><path d="M12 22V7" /><path d="M2 13h10" /></svg>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Saffron</h3>
+                <p className="text-slate-600 mb-4">The Red Gold Initiative</p>
+                <span className="inline-flex items-center text-red-600 font-medium group-hover:underline">
+                  View Project
+                </span>
+              </div>
+            </button>
+
+             {/* PGM / Aris */}
             <button
                onClick={() => onNavigate('ARIS')}
               className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-purple-400 hover:shadow-xl hover:shadow-purple-100 transition-all text-center cursor-pointer w-full"
@@ -172,7 +206,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><line x1="9" y1="15" x2="15" y2="15" /></svg>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Aris (PGM)</h3>
-                <p className="text-slate-600 mb-4">Platinum Group Metals details</p>
+                <p className="text-slate-600 mb-4">Platinum Group Metals</p>
                 <span className="inline-flex items-center text-purple-600 font-medium group-hover:underline">
                   View Project
                 </span>
@@ -191,6 +225,23 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Integrated Steel</h3>
                 <p className="text-slate-600 mb-4">Steel Mill Ecosystem</p>
                 <span className="inline-flex items-center text-blue-600 font-medium group-hover:underline">
+                  View Project
+                </span>
+              </div>
+            </button>
+
+            {/* REE Project */}
+            <button
+               onClick={() => onNavigate('REE')}
+              className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-emerald-400 hover:shadow-xl hover:shadow-emerald-100 transition-all text-center cursor-pointer w-full"
+            >
+              <div className="flex flex-col items-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 mb-6 group-hover:scale-110 transition-transform">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3" /></svg>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Rare Earth</h3>
+                <p className="text-slate-600 mb-4">Element Strategic Sovereignty</p>
+                <span className="inline-flex items-center text-emerald-600 font-medium group-hover:underline">
                   View Project
                 </span>
               </div>
