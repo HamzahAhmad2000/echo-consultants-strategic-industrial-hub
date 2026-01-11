@@ -1,6 +1,6 @@
 import React from 'react';
 import { PILLARS_METRICS } from '../constants';
-import { ShieldCheck, Globe, Zap, BarChart3 } from 'lucide-react';
+import { ShieldCheck, Globe, Zap, BarChart3, Coins, Leaf, Flower2, Gem, Factory, Atom } from 'lucide-react';
 import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
 interface HomeProps {
@@ -152,7 +152,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             >
               <div className="flex flex-col items-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-yellow-50 text-yellow-600 mb-6 group-hover:scale-110 transition-transform">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><line x1="9" y1="15" x2="15" y2="15" /></svg>
+                  <Coins size={32} />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Indus-K Gold Project</h3>
                 <p className="text-slate-600 mb-4">Placer Gold Details</p>
@@ -169,7 +169,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             >
               <div className="flex flex-col items-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-50 text-green-600 mb-6 group-hover:scale-110 transition-transform">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22v-8" /><path d="M5 10c0-6 7-6 7-6s7 0 7 6a6 6 0 0 1-6 6c-3 0-4-3-4-3s-1 3-4 3a6 6 0 0 1-6-6z" /><path d="M5 2c0 3 4 3 4 3s1-2 4-2c0 0 4 0 4 3" /></svg>
+                  <Leaf size={32} />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Cannabis (CCRA)</h3>
                 <p className="text-slate-600 mb-4">Medicinal & Industrial</p>
@@ -186,7 +186,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             >
               <div className="flex flex-col items-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-50 text-red-600 mb-6 group-hover:scale-110 transition-transform">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5-6 6-5-5-2 16a2 2 0 0 0 2 2h8" /><path d="M12 22V7" /><path d="M2 13h10" /></svg>
+                  <Flower2 size={32} />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Saffron</h3>
                 <p className="text-slate-600 mb-4">The Red Gold Initiative</p>
@@ -203,7 +203,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             >
               <div className="flex flex-col items-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-50 text-purple-600 mb-6 group-hover:scale-110 transition-transform">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><line x1="9" y1="15" x2="15" y2="15" /></svg>
+                  <Gem size={32} />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Aris (PGM)</h3>
                 <p className="text-slate-600 mb-4">Platinum Group Metals</p>
@@ -220,7 +220,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             >
               <div className="flex flex-col items-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-50 text-blue-600 mb-6 group-hover:scale-110 transition-transform">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><line x1="9" y1="15" x2="15" y2="15" /></svg>
+                  <Factory size={32} />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Integrated Steel</h3>
                 <p className="text-slate-600 mb-4">Steel Mill Ecosystem</p>
@@ -237,10 +237,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             >
               <div className="flex flex-col items-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 mb-6 group-hover:scale-110 transition-transform">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3" /></svg>
+                  <Atom size={32} />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Rare Earth</h3>
-                <p className="text-slate-600 mb-4">Element Strategic Sovereignty</p>
+                <p className="text-slate-600 mb-4">Strategic Sovereignty</p>
                 <span className="inline-flex items-center text-emerald-600 font-medium group-hover:underline">
                   View Project
                 </span>
