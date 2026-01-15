@@ -29,9 +29,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
-          <div className="inline-block px-4 py-1 mb-6 border border-echo-primary/30 rounded-full bg-echo-light backdrop-blur-sm">
-            <span className="text-echo-primary text-sm font-mono tracking-widest uppercase font-bold">Strategic Industrial Renaissance</span>
-          </div>
           <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
             Pakistan's Industrial <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-echo-primary to-echo-accent">Transformation</span>

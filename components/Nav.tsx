@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PageState } from '../types';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 interface NavProps {
   activePage: PageState;
@@ -8,16 +8,22 @@ interface NavProps {
 }
 
 const Nav: React.FC<NavProps> = ({ activePage, onNavigate }) => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [strategicOpen, setStrategicOpen] = useState(false);
 
-  const navItems = [
-    { id: PageState.PLATINUM, label: 'Platinum (PGM)', sector: 'Strategic' },
-    { id: PageState.PLACER_GOLD, label: 'Placer Gold', sector: 'Strategic' },
-    { id: PageState.AGRICULTURE, label: 'Agriculture', sector: 'Agriculture' },
-    { id: PageState.STEEL_MILL, label: 'Steel Mill', sector: 'Industrial' },
-    { id: PageState.ENVIRONMENT, label: 'Environment', sector: 'Environment' },
-    { id: PageState.REE, label: 'Rare Earth', sector: 'Strategic' },
+  const strategicItems = [
+    { id: PageState.PLATINUM, label: 'Platinum (PGM)' },
+    { id: PageState.PLACER_GOLD, label: 'Placer Gold' },
+    { id: PageState.REE, label: 'Rare Earth' },
   ];
+
+  const otherNavItems = [
+    { id: PageState.STEEL_MILL, label: 'Industrial' },
+    { id: PageState.AGRICULTURE, label: 'Agriculture' },
+    { id: PageState.ENVIRONMENT, label: 'Environment' },
+  ];
+
+  const isStrategicActive = strategicItems.some(item => item.id === activePage);
 
   return (
     <nav className="fixed top-0 w-full z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
@@ -32,8 +38,44 @@ const Nav: React.FC<NavProps> = ({ activePage, onNavigate }) => {
           </div>
 
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              {navItems.map((item) => (
+            <div className="ml-10 flex items-baseline space-x-6">
+              {/* Strategic Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => setStrategicOpen(!strategicOpen)}
+                  onBlur={() => setTimeout(() => setStrategicOpen(false), 150)}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center gap-1 ${isStrategicActive
+                    ? 'text-echo-primary bg-echo-light'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                    }`}
+                >
+                  Strategic
+                  <ChevronDown className={`w-4 h-4 transition-transform ${strategicOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {strategicOpen && (
+                  <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-slate-200 rounded-lg shadow-lg py-2 z-50">
+                    {strategicItems.map((item) => (
+                      <button
+                        key={item.id}
+                        onClick={() => {
+                          onNavigate(item.id);
+                          setStrategicOpen(false);
+                        }}
+                        className={`block w-full text-left px-4 py-2 text-sm transition-colors ${activePage === item.id
+                          ? 'text-echo-primary bg-echo-light'
+                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                          }`}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Other Nav Items */}
+              {otherNavItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => onNavigate(item.id)}
@@ -62,7 +104,27 @@ const Nav: React.FC<NavProps> = ({ activePage, onNavigate }) => {
       {isOpen && (
         <div className="md:hidden bg-white border-b border-slate-200 shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navItems.map((item) => (
+            {/* Strategic Section */}
+            <div className="px-3 py-2 text-xs font-bold text-slate-400 uppercase tracking-wider">Strategic</div>
+            {strategicItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => {
+                  onNavigate(item.id);
+                  setIsOpen(false);
+                }}
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium ${activePage === item.id
+                  ? 'text-echo-primary bg-echo-light'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                  }`}
+              >
+                {item.label}
+              </button>
+            ))}
+
+            {/* Other Items */}
+            <div className="px-3 py-2 text-xs font-bold text-slate-400 uppercase tracking-wider mt-4">Other Sectors</div>
+            {otherNavItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => {
