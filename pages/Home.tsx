@@ -104,17 +104,17 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                       </div>
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-1">{pillar.title}</h3>
-                    <p className="text-sm text-slate-500 mb-4">{pillar.subtitle}</p>
+                    <p className="text-sm text-slate-800 font-medium mb-4">{pillar.subtitle}</p>
 
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       {pillar.metrics.map((m, idx) => (
                         <div key={idx}>
-                          <span className="block text-xs text-slate-400 uppercase">{m.label}</span>
-                          <span className={`block font-mono font-bold ${m.highlight ? 'text-echo-primary' : 'text-slate-700'}`}>{m.value}</span>
+                          <span className="block text-xs text-slate-700 font-bold uppercase">{m.label}</span>
+                          <span className={`block font-mono font-bold ${m.highlight ? 'text-echo-primary' : 'text-slate-900'}`}>{m.value}</span>
                         </div>
                       ))}
                     </div>
-                    <p className="text-sm text-slate-600 border-t border-slate-100 pt-4 mb-4">
+                    <p className="text-sm text-slate-800 font-medium border-t border-slate-300 pt-4 mb-4">
                       {pillar.description}
                     </p>
                     
