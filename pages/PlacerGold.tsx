@@ -34,33 +34,57 @@ const PlacerGold: React.FC = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center">
-                  <Mountain className="w-5 h-5 mr-2 text-slate-500" /> Geological Advantage
-                </h3>
-                <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                  Focusing on <strong>Placer Gold Deposits</strong> naturally concentrated by the Indus River.
-                  <br /><br />
-                  <strong>"Free Milling"</strong> status means gold is separated from rock by erosion, avoiding deep mining costs and chemicals.
-                </p>
+              {/* Geological Advantage with Image */}
+              <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                <div className="h-48 relative">
+                  <img 
+                    src="/assets/goldmining/Gemini_Generated_Image_myrg4xmyrg4xmyrg.png" 
+                    alt="Placer Gold Extraction" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                    <h3 className="text-lg font-bold text-white flex items-center">
+                      <Mountain className="w-5 h-5 mr-2 text-yellow-400" /> Geological Advantage
+                    </h3>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Focusing on <strong>Placer Gold Deposits</strong> naturally concentrated by the Indus River.
+                    <br /><br />
+                    <strong>"Free Milling"</strong> status means gold is separated from rock by erosion, avoiding deep mining costs and chemicals.
+                  </p>
+                </div>
               </div>
 
-              <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                 <h3 className="text-lg font-bold text-slate-900 mb-4">Operational Highlights</h3>
-                 <ul className="space-y-3">
-                   <li className="flex items-center text-slate-700">
-                     <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                     Rapid Deployment Model
-                   </li>
-                   <li className="flex items-center text-slate-700">
-                     <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                     High-Margin Operations due to low OPEX
-                   </li>
-                   <li className="flex items-center text-slate-700">
-                     <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                     Environmentally Responsible Extraction
-                   </li>
-                 </ul>
+              {/* Operational Highlights with Image */}
+              <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                <div className="h-48 relative">
+                   <img 
+                    src="/assets/goldmining/Gemini_Generated_Image_ishsxcishsxcishs.png" 
+                    alt="Processing Facility" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                    <h3 className="text-lg font-bold text-white">Operational Highlights</h3>
+                  </div>
+                </div>
+                <div className="p-6">
+                   <ul className="space-y-3">
+                     <li className="flex items-center text-slate-700">
+                       <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                       Rapid Deployment Model
+                     </li>
+                     <li className="flex items-center text-slate-700">
+                       <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                       High-Margin Operations due to low OPEX
+                     </li>
+                     <li className="flex items-center text-slate-700">
+                       <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                       Environmentally Responsible Extraction
+                     </li>
+                   </ul>
+                </div>
               </div>
             </div>
 
@@ -77,33 +101,6 @@ const PlacerGold: React.FC = () => {
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Operational Imagery */}
-        <section className="mb-16">
-          <h3 className="text-2xl font-bold text-slate-900 mb-6">Operational Imagery</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="group overflow-hidden rounded-xl border border-slate-200 shadow-sm relative h-64 md:h-80">
-              <img 
-                src="/assets/goldmining/Gemini_Generated_Image_myrg4xmyrg4xmyrg.png" 
-                alt="Placer Gold Extraction Process" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-                <span className="text-white font-medium text-lg">Extraction Operations</span>
-              </div>
-            </div>
-            <div className="group overflow-hidden rounded-xl border border-slate-200 shadow-sm relative h-64 md:h-80">
-              <img 
-                src="/assets/goldmining/Gemini_Generated_Image_ishsxcishsxcishs.png" 
-                alt="Gold Processing Facility" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-                <span className="text-white font-medium text-lg">Processing Facility</span>
-              </div>
             </div>
           </div>
         </section>
