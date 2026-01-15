@@ -17,8 +17,8 @@ const data = [
 // Map pillar IDs to their corresponding images and page routes
 const pillarConfig: Record<string, { image: string; route: string; color: string }> = {
   'gold': { image: '/assets/cardimages/gold.jpg', route: 'PLACER_GOLD', color: 'yellow' },
-  'cannabis': { image: '/assets/cardimages/cannabis.jpg', route: 'AGRICULTURE', color: 'green' },
-  'saffron': { image: '/assets/cardimages/saffron.jpg', route: 'AGRICULTURE', color: 'red' },
+  'cannabis': { image: '/assets/cardimages/cannabis.jpg', route: 'CANNABIS', color: 'green' },
+  'saffron': { image: '/assets/cardimages/saffron.jpg', route: 'SAFFRON', color: 'red' },
   'pgm': { image: '/assets/cardimages/platinum.jpg', route: 'PLATINUM', color: 'purple' },
   'steel': { image: '/assets/cardimages/steel.jpg', route: 'STEEL_MILL', color: 'blue' },
   'ree': { image: '/assets/cardimages/REE.jpg', route: 'REE', color: 'emerald' },
