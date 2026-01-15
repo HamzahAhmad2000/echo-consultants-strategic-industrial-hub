@@ -1,6 +1,6 @@
 import React from 'react';
 import { PILLARS_METRICS } from '../constants';
-import { ShieldCheck, Globe, Zap, BarChart3, Coins, Leaf, Gem, Factory, Atom, Droplets, TreePine } from 'lucide-react';
+import { ShieldCheck, Globe, Zap, BarChart3, ArrowRight } from 'lucide-react';
 import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
 interface HomeProps {
@@ -13,6 +13,16 @@ const data = [
   { name: 'PGM', value: 85, label: 'Market Demand' },
   { name: 'Gold', value: 100, label: 'ROI Potential' },
 ];
+
+// Map pillar IDs to their corresponding images and page routes
+const pillarConfig: Record<string, { image: string; route: string; color: string }> = {
+  'gold': { image: '/assets/cardimages/gold.jpg', route: 'PLACER_GOLD', color: 'yellow' },
+  'cannabis': { image: '/assets/cardimages/cannabis.jpg', route: 'AGRICULTURE', color: 'green' },
+  'saffron': { image: '/assets/cardimages/saffron.jpg', route: 'AGRICULTURE', color: 'red' },
+  'pgm': { image: '/assets/cardimages/platinum.jpg', route: 'PLATINUM', color: 'purple' },
+  'steel': { image: '/assets/cardimages/steel.jpg', route: 'STEEL_MILL', color: 'blue' },
+  'ree': { image: '/assets/cardimages/REE.jpg', route: 'REE', color: 'emerald' },
+};
 
 const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   return (
@@ -63,29 +73,56 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {PILLARS_METRICS.map((pillar) => (
-              <div key={pillar.id} className="group bg-white border border-slate-200 hover:border-echo-primary p-6 rounded-xl transition-all hover:shadow-xl hover:shadow-emerald-100">
-                <div className="flex justify-between items-start mb-4">
-                  <div className={`p-3 rounded-lg ${pillar.id === 'gold' ? 'bg-yellow-50 text-yellow-600' : 'bg-emerald-50 text-emerald-600'}`}>
-                    <BarChart3 size={24} />
+            {PILLARS_METRICS.map((pillar) => {
+              const config = pillarConfig[pillar.id] || { image: '', route: 'HOME', color: 'slate' };
+              
+              return (
+                <button
+                  key={pillar.id}
+                  onClick={() => onNavigate(config.route)}
+                  className="group relative overflow-hidden bg-white border border-slate-200 hover:border-echo-primary rounded-xl transition-all hover:shadow-xl hover:shadow-emerald-100 cursor-pointer text-left"
+                >
+                  {/* Background Image with Gradient Overlay */}
+                  <div className="absolute inset-0 z-0">
+                    <img
+                      src={config.image}
+                      alt={pillar.title}
+                      className="w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-white/70"></div>
                   </div>
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-1">{pillar.title}</h3>
-                <p className="text-sm text-slate-500 mb-4">{pillar.subtitle}</p>
-
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  {pillar.metrics.map((m, idx) => (
-                    <div key={idx}>
-                      <span className="block text-xs text-slate-400 uppercase">{m.label}</span>
-                      <span className={`block font-mono font-bold ${m.highlight ? 'text-echo-primary' : 'text-slate-700'}`}>{m.value}</span>
+                  
+                  {/* Content */}
+                  <div className="relative z-10 p-6">
+                    <div className="flex justify-between items-start mb-4">
+                      <div className={`p-3 rounded-lg ${pillar.id === 'gold' ? 'bg-yellow-50 text-yellow-600' : 'bg-emerald-50 text-emerald-600'}`}>
+                        <BarChart3 size={24} />
+                      </div>
                     </div>
-                  ))}
-                </div>
-                <p className="text-sm text-slate-600 border-t border-slate-100 pt-4">
-                  {pillar.description}
-                </p>
-              </div>
-            ))}
+                    <h3 className="text-xl font-bold text-slate-900 mb-1">{pillar.title}</h3>
+                    <p className="text-sm text-slate-500 mb-4">{pillar.subtitle}</p>
+
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      {pillar.metrics.map((m, idx) => (
+                        <div key={idx}>
+                          <span className="block text-xs text-slate-400 uppercase">{m.label}</span>
+                          <span className={`block font-mono font-bold ${m.highlight ? 'text-echo-primary' : 'text-slate-700'}`}>{m.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-sm text-slate-600 border-t border-slate-100 pt-4 mb-4">
+                      {pillar.description}
+                    </p>
+                    
+                    {/* View Project Button */}
+                    <div className="flex items-center text-echo-primary font-medium group-hover:underline">
+                      View Project
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -127,159 +164,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               <p className="text-slate-600">
                 Strategic integration with <strong className="text-slate-900">CPEC, BRI</strong>, and the global energy transition (EVs/Hydrogen).
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects by Sector */}
-      <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900">Project Sectors</h2>
-            <p className="text-slate-500 mt-2">Organized by strategic category</p>
-          </div>
-
-          {/* Strategic Projects */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
-              <span className="px-3 py-1 text-xs font-bold uppercase tracking-wider bg-yellow-100 text-yellow-800 rounded-full mr-3">Strategic Projects</span>
-              <div className="flex-grow h-px bg-yellow-200"></div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Platinum */}
-              <button
-                onClick={() => onNavigate('PLATINUM')}
-                className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-yellow-400 hover:shadow-xl hover:shadow-yellow-100 transition-all text-center cursor-pointer w-full"
-              >
-                <div className="flex flex-col items-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-50 text-purple-600 mb-6 group-hover:scale-110 transition-transform">
-                    <Gem size={32} />
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">Platinum (PGM)</h3>
-                  <p className="text-slate-600 mb-4">Platinum Group Metals</p>
-                  <span className="inline-flex items-center text-purple-600 font-medium group-hover:underline">
-                    View Project
-                  </span>
-                </div>
-              </button>
-
-              {/* Gold Project */}
-              <button
-                onClick={() => onNavigate('PLACER_GOLD')}
-                className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-yellow-400 hover:shadow-xl hover:shadow-yellow-100 transition-all text-center cursor-pointer w-full"
-              >
-                <div className="flex flex-col items-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-yellow-50 text-yellow-600 mb-6 group-hover:scale-110 transition-transform">
-                    <Coins size={32} />
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">Indus-K Gold Project</h3>
-                  <p className="text-slate-600 mb-4">Placer Gold Details</p>
-                  <span className="inline-flex items-center text-yellow-600 font-medium group-hover:underline">
-                    View Project
-                  </span>
-                </div>
-              </button>
-
-              {/* REE Project */}
-              <button
-                onClick={() => onNavigate('REE')}
-                className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-yellow-400 hover:shadow-xl hover:shadow-yellow-100 transition-all text-center cursor-pointer w-full"
-              >
-                <div className="flex flex-col items-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 mb-6 group-hover:scale-110 transition-transform">
-                    <Atom size={32} />
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">Rare Earth</h3>
-                  <p className="text-slate-600 mb-4">Strategic Sovereignty</p>
-                  <span className="inline-flex items-center text-emerald-600 font-medium group-hover:underline">
-                    View Project
-                  </span>
-                </div>
-              </button>
-            </div>
-          </div>
-
-          {/* Agriculture */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
-              <span className="px-3 py-1 text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 rounded-full mr-3">Agriculture</span>
-              <div className="flex-grow h-px bg-green-200"></div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Agriculture Combined */}
-              <button
-                onClick={() => onNavigate('AGRICULTURE')}
-                className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-green-400 hover:shadow-xl hover:shadow-green-100 transition-all text-center cursor-pointer w-full md:col-span-2"
-              >
-                <div className="flex flex-col items-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-50 text-green-600 mb-6 group-hover:scale-110 transition-transform">
-                    <Leaf size={32} />
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">Cash Crops: Cannabis & Saffron</h3>
-                  <p className="text-slate-600 mb-4">Medicinal, Industrial & Premium Agriculture</p>
-                  <span className="inline-flex items-center text-green-600 font-medium group-hover:underline">
-                    View Project
-                  </span>
-                </div>
-              </button>
-            </div>
-          </div>
-
-          {/* Industrial */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
-              <span className="px-3 py-1 text-xs font-bold uppercase tracking-wider bg-blue-100 text-blue-800 rounded-full mr-3">Industrial</span>
-              <div className="flex-grow h-px bg-blue-200"></div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Steel Project */}
-              <button
-                onClick={() => onNavigate('STEEL_MILL')}
-                className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-100 transition-all text-center cursor-pointer w-full md:col-span-2"
-              >
-                <div className="flex flex-col items-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-50 text-blue-600 mb-6 group-hover:scale-110 transition-transform">
-                    <Factory size={32} />
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">Integrated Steel</h3>
-                  <p className="text-slate-600 mb-4">5M Ton/Year Steel Mill Ecosystem</p>
-                  <span className="inline-flex items-center text-blue-600 font-medium group-hover:underline">
-                    View Project
-                  </span>
-                </div>
-              </button>
-            </div>
-          </div>
-
-          {/* Environment */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
-              <span className="px-3 py-1 text-xs font-bold uppercase tracking-wider bg-teal-100 text-teal-800 rounded-full mr-3">Environment</span>
-              <div className="flex-grow h-px bg-teal-200"></div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Environment Project */}
-              <button
-                onClick={() => onNavigate('ENVIRONMENT')}
-                className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-teal-400 hover:shadow-xl hover:shadow-teal-100 transition-all text-center cursor-pointer w-full md:col-span-2"
-              >
-                <div className="flex flex-col items-center">
-                  <div className="flex items-center justify-center gap-3 mb-6">
-                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-teal-50 text-teal-600 group-hover:scale-110 transition-transform">
-                      <Droplets size={28} />
-                    </div>
-                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-50 text-emerald-600 group-hover:scale-110 transition-transform">
-                      <TreePine size={28} />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">Clean Mining & Water Conservation</h3>
-                  <p className="text-slate-600 mb-4">Sustainable Infrastructure & Climate Projects</p>
-                  <span className="inline-flex items-center text-teal-600 font-medium group-hover:underline">
-                    View Project
-                  </span>
-                </div>
-              </button>
             </div>
           </div>
         </div>
