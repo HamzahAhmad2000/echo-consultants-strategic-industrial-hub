@@ -80,6 +80,33 @@ const PlacerGold: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* Operational Imagery */}
+        <section className="mb-16">
+          <h3 className="text-2xl font-bold text-slate-900 mb-6">Operational Imagery</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="group overflow-hidden rounded-xl border border-slate-200 shadow-sm relative h-64 md:h-80">
+              <img 
+                src="/assets/goldmining/Gemini_Generated_Image_myrg4xmyrg4xmyrg.png" 
+                alt="Placer Gold Extraction Process" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                <span className="text-white font-medium text-lg">Extraction Operations</span>
+              </div>
+            </div>
+            <div className="group overflow-hidden rounded-xl border border-slate-200 shadow-sm relative h-64 md:h-80">
+              <img 
+                src="/assets/goldmining/Gemini_Generated_Image_ishsxcishsxcishs.png" 
+                alt="Gold Processing Facility" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                <span className="text-white font-medium text-lg">Processing Facility</span>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
