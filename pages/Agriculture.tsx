@@ -3,8 +3,17 @@ import { SAFFRON_STEPS, CCRA_PRODUCTION_OUTPUT, CCRA_FDI_PIPELINE, CCRA_INDUSTRY
 import { Sprout, Thermometer, Clock, Scale, Users, Flower2, Leaf, TrendingUp, Building2 } from 'lucide-react';
 import DataCard from '../components/DataCard';
 
-const Agriculture: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'cannabis' | 'saffron'>('cannabis');
+interface AgricultureProps {
+  initialTab?: 'cannabis' | 'saffron';
+}
+
+const Agriculture: React.FC<AgricultureProps> = ({ initialTab = 'cannabis' }) => {
+  const [activeTab, setActiveTab] = useState<'cannabis' | 'saffron'>(initialTab);
+
+  // Update activeTab when initialTab prop changes (e.g. navigation)
+  React.useEffect(() => {
+    setActiveTab(initialTab);
+  }, [initialTab]);
 
   return (
     <div className="min-h-screen py-10 bg-slate-50">

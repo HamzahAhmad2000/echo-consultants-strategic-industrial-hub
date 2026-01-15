@@ -12,14 +12,15 @@ const Nav: React.FC<NavProps> = ({ activePage, onNavigate }) => {
   const [strategicOpen, setStrategicOpen] = useState(false);
 
   const strategicItems = [
-    { id: PageState.PLATINUM, label: 'Platinum (PGM)' },
     { id: PageState.PLACER_GOLD, label: 'Placer Gold' },
+    { id: PageState.PLATINUM, label: 'Platinum (PGM)' },
     { id: PageState.REE, label: 'Rare Earth' },
   ];
 
   const otherNavItems = [
+    { id: PageState.SAFFRON, label: 'Saffron' },
+    { id: PageState.CANNABIS, label: 'Cannabis' },
     { id: PageState.STEEL_MILL, label: 'Industrial' },
-    { id: PageState.AGRICULTURE, label: 'Agriculture' },
     { id: PageState.ENVIRONMENT, label: 'Environment' },
   ];
 

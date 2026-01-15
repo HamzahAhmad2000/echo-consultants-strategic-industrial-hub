@@ -3,8 +3,6 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import StickyCTA from './components/StickyCTA';
 import PlacerGold from './pages/PlacerGold';
-import Cannabis from './pages/Cannabis';
-import Saffron from './pages/Saffron';
 import Platinum from './pages/Platinum';
 import SteelMill from './pages/SteelMill';
 import RareEarth from './pages/RareEarth';
@@ -28,9 +26,9 @@ const App: React.FC = () => {
       case PageState.PLACER_GOLD:
         return <PlacerGold />;
       case PageState.CANNABIS:
-        return <Cannabis />;
+        return <Agriculture initialTab="cannabis" />;
       case PageState.SAFFRON:
-        return <Saffron />;
+        return <Agriculture initialTab="saffron" />;
       case PageState.PLATINUM:
         return <Platinum />;
       case PageState.STEEL_MILL:
