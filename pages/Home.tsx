@@ -30,12 +30,16 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/assets/fields (1).jpeg"
-            alt="Gilgit-Baltistan Industrial Landscape"
-            className="w-full h-full object-cover opacity-30"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/80 to-slate-50"></div>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/assets/hero-video.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-white/70 to-slate-50"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
@@ -87,9 +91,9 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     <img
                       src={config.image}
                       alt={pillar.title}
-                      className="w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-500"
+                      className="w-full h-full object-cover opacity-50 group-hover:opacity-60 group-hover:scale-105 transition-all duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-white/70"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-white/60"></div>
                   </div>
                   
                   {/* Content */}
