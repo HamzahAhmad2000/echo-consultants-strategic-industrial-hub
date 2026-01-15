@@ -3,9 +3,11 @@ export enum PageState {
   PLACER_GOLD = 'PLACER_GOLD',
   CANNABIS = 'CANNABIS',
   SAFFRON = 'SAFFRON',
-  ARIS = 'ARIS',
+  PLATINUM = 'PLATINUM',
   STEEL_MILL = 'STEEL_MILL',
   REE = 'REE',
+  AGRICULTURE = 'AGRICULTURE',
+  ENVIRONMENT = 'ENVIRONMENT',
 }
 
 export interface Metric {

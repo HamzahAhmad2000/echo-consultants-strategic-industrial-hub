@@ -5,9 +5,11 @@ import StickyCTA from './components/StickyCTA';
 import PlacerGold from './pages/PlacerGold';
 import Cannabis from './pages/Cannabis';
 import Saffron from './pages/Saffron';
-import Aris from './pages/Aris';
+import Platinum from './pages/Platinum';
 import SteelMill from './pages/SteelMill';
 import RareEarth from './pages/RareEarth';
+import Agriculture from './pages/Agriculture';
+import Environment from './pages/Environment';
 import Home from './pages/Home';
 import { PageState } from './types';
 
@@ -29,12 +31,16 @@ const App: React.FC = () => {
         return <Cannabis />;
       case PageState.SAFFRON:
         return <Saffron />;
-      case PageState.ARIS:
-        return <Aris />;
+      case PageState.PLATINUM:
+        return <Platinum />;
       case PageState.STEEL_MILL:
         return <SteelMill />;
       case PageState.REE:
         return <RareEarth />;
+      case PageState.AGRICULTURE:
+        return <Agriculture />;
+      case PageState.ENVIRONMENT:
+        return <Environment />;
       default:
         return <Home onNavigate={setActivePage} />;
     }

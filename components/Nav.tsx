@@ -11,12 +11,12 @@ const Nav: React.FC<NavProps> = ({ activePage, onNavigate }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const navItems = [
-    { id: PageState.PLACER_GOLD, label: 'Placer Gold' },
-    { id: PageState.CANNABIS, label: 'Cannabis' },
-    { id: PageState.SAFFRON, label: 'Saffron' },
-    { id: PageState.ARIS, label: 'Aris' },
-    { id: PageState.STEEL_MILL, label: 'Steel Mill' },
-    { id: PageState.REE, label: 'Rare Earth' },
+    { id: PageState.PLATINUM, label: 'Platinum (PGM)', sector: 'Strategic' },
+    { id: PageState.PLACER_GOLD, label: 'Placer Gold', sector: 'Strategic' },
+    { id: PageState.AGRICULTURE, label: 'Agriculture', sector: 'Agriculture' },
+    { id: PageState.STEEL_MILL, label: 'Steel Mill', sector: 'Industrial' },
+    { id: PageState.ENVIRONMENT, label: 'Environment', sector: 'Environment' },
+    { id: PageState.REE, label: 'Rare Earth', sector: 'Strategic' },
   ];
 
   return (

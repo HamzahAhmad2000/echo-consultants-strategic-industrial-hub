@@ -35,7 +35,7 @@ export const PILLARS_METRICS: ProjectData[] = [
   },
   {
     id: 'pgm',
-    title: 'Aris (PGM)',
+    title: 'Platinum (PGM)',
     subtitle: 'New Bushveld Frontier',
     description: 'First-mover access to underexplored Ophiolite belts.',
     metrics: [
