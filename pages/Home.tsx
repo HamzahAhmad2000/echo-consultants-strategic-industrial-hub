@@ -91,9 +91,9 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     <img
                       src={config.image}
                       alt={pillar.title}
-                      className="w-full h-full object-cover opacity-55 group-hover:opacity-65 group-hover:scale-105 transition-all duration-500"
+                      className="w-full h-full object-cover opacity-70 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-white/50"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-white/30"></div>
                   </div>
                   
                   {/* Content */}
