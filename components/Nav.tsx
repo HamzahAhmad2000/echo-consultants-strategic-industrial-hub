@@ -18,8 +18,7 @@ const Nav: React.FC<NavProps> = ({ activePage, onNavigate }) => {
   ];
 
   const otherNavItems = [
-    { id: PageState.SAFFRON, label: 'Saffron' },
-    { id: PageState.CANNABIS, label: 'Cannabis' },
+    { id: PageState.AGRICULTURE, label: 'Agriculture' },
     { id: PageState.STEEL_MILL, label: 'Industrial' },
     { id: PageState.ENVIRONMENT, label: 'Environment' },
   ];

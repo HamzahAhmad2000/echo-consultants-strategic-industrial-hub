@@ -7,7 +7,7 @@ interface AgricultureProps {
   initialTab?: 'cannabis' | 'saffron';
 }
 
-const Agriculture: React.FC<AgricultureProps> = ({ initialTab = 'cannabis' }) => {
+const Agriculture: React.FC<AgricultureProps> = ({ initialTab = 'saffron' }) => {
   const [activeTab, setActiveTab] = useState<'cannabis' | 'saffron'>(initialTab);
 
   // Update activeTab when initialTab prop changes (e.g. navigation)
@@ -30,16 +30,6 @@ const Agriculture: React.FC<AgricultureProps> = ({ initialTab = 'cannabis' }) =>
         <div className="mb-8">
           <div className="flex space-x-2 bg-white p-1 rounded-lg inline-flex border border-slate-200 shadow-sm">
             <button
-              onClick={() => setActiveTab('cannabis')}
-              className={`px-6 py-3 rounded-md text-sm font-medium transition-all flex items-center ${activeTab === 'cannabis'
-                  ? 'bg-green-600 text-white shadow-md'
-                  : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50'
-                }`}
-            >
-              <Leaf className="w-4 h-4 mr-2" />
-              Cannabis (CCRA)
-            </button>
-            <button
               onClick={() => setActiveTab('saffron')}
               className={`px-6 py-3 rounded-md text-sm font-medium transition-all flex items-center ${activeTab === 'saffron'
                   ? 'bg-red-600 text-white shadow-md'
@@ -48,6 +38,16 @@ const Agriculture: React.FC<AgricultureProps> = ({ initialTab = 'cannabis' }) =>
             >
               <Flower2 className="w-4 h-4 mr-2" />
               Saffron
+            </button>
+            <button
+              onClick={() => setActiveTab('cannabis')}
+              className={`px-6 py-3 rounded-md text-sm font-medium transition-all flex items-center ${activeTab === 'cannabis'
+                  ? 'bg-green-600 text-white shadow-md'
+                  : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50'
+                }`}
+            >
+              <Leaf className="w-4 h-4 mr-2" />
+              Cannabis (CCRA)
             </button>
           </div>
         </div>
