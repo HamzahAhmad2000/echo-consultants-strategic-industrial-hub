@@ -39,7 +39,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           >
             <source src="/assets/hero-video.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-white/70 to-slate-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/45 via-white/60 to-slate-50"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
@@ -91,9 +91,9 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     <img
                       src={config.image}
                       alt={pillar.title}
-                      className="w-full h-full object-cover opacity-50 group-hover:opacity-60 group-hover:scale-105 transition-all duration-500"
+                      className="w-full h-full object-cover opacity-55 group-hover:opacity-65 group-hover:scale-105 transition-all duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-white/60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-white/50"></div>
                   </div>
                   
                   {/* Content */}
