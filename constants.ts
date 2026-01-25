@@ -20,7 +20,7 @@ export const PILLARS_METRICS: ProjectData[] = [
     description: 'State-backed framework for medicinal and industrial cannabis.',
     metrics: [
       { label: 'Market', value: 'Global', highlight: true },
-      { label: 'Status', value: 'Policy Phase' },
+      { label: 'Status', value: 'Policy Approved' },
     ]
   },
   {

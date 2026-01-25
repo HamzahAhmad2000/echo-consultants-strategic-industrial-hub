@@ -47,7 +47,7 @@ const Agriculture: React.FC<AgricultureProps> = ({ initialTab = 'saffron' }) => 
                 }`}
             >
               <Leaf className="w-4 h-4 mr-2" />
-              Cannabis (CCRA)
+              Cannabis
             </button>
           </div>
         </div>
@@ -61,7 +61,7 @@ const Agriculture: React.FC<AgricultureProps> = ({ initialTab = 'saffron' }) => 
                   <TrendingUp size={32} />
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold text-slate-900">Cannabis Control & Regulatory Authority</h2>
+                  <h2 className="text-3xl font-bold text-slate-900">Cannabis Project</h2>
                   <p className="text-slate-600">Medicinal & Industrial Hemp Initiative</p>
                 </div>
               </div>
@@ -103,8 +103,8 @@ const Agriculture: React.FC<AgricultureProps> = ({ initialTab = 'saffron' }) => 
                       <span className="flex items-center">
                         <Building2 className="w-5 h-5 mr-2 text-blue-600" /> FDI Pipeline
                       </span>
-                      <span className="text-xs font-normal text-amber-700 bg-amber-100 px-3 py-1 rounded-full">
-                        Pending Cabinet Approval
+                      <span className="text-xs font-normal text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
+                        CCRA Policy Approved
                       </span>
                     </h3>
 
@@ -113,14 +113,12 @@ const Agriculture: React.FC<AgricultureProps> = ({ initialTab = 'saffron' }) => 
                         <thead>
                           <tr className="border-b border-slate-200">
                             <th className="text-left py-3 px-4 text-xs uppercase text-slate-500 font-semibold">Investor</th>
-                            <th className="text-left py-3 px-4 text-xs uppercase text-slate-500 font-semibold">Status</th>
                           </tr>
                         </thead>
                         <tbody>
                           {CCRA_FDI_PIPELINE.map((item, idx) => (
                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                               <td className="py-3 px-4 text-slate-900 font-medium">{item.investor}</td>
-                              <td className="py-3 px-4 text-slate-500 text-sm">{item.status}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -156,8 +154,161 @@ const Agriculture: React.FC<AgricultureProps> = ({ initialTab = 'saffron' }) => 
                   <Sprout size={32} />
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold text-slate-900">Saffron - The Red Gold</h2>
-                  <p className="text-slate-600">Chitral Initiative: High-Value Precision Harvesting</p>
+                  <h2 className="text-3xl font-bold text-slate-900">Chitral Saffron Project</h2>
+                  <p className="text-slate-600">Progress Update - Presented by Dr. Khalid Mehmood | 14 January 2025</p>
+                  <p className="text-sm text-slate-500 mt-1">Organization: Infinite Mind Power</p>
+                </div>
+              </div>
+
+              {/* Project Overview */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                  <h3 className="text-lg font-bold text-slate-900 mb-4">Project Status</h3>
+                  <ul className="space-y-2 text-sm text-slate-600">
+                    <li className="flex items-start">
+                      <span className="text-emerald-600 mr-2">✓</span>
+                      <span>Project land fully secured</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-emerald-600 mr-2">✓</span>
+                      <span>All lease obligations cleared</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-emerald-600 mr-2">✓</span>
+                      <span>Crop establishment phase completed</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-emerald-600 mr-2">✓</span>
+                      <span>First harvest executed as planned</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                  <h3 className="text-lg font-bold text-slate-900 mb-4">First Year Harvest</h3>
+                  <div className="space-y-3">
+                    <div>
+                      <p className="text-xs text-slate-500 uppercase">Fresh Flowers</p>
+                      <p className="text-2xl font-bold text-slate-900">5.5 kg</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-500 uppercase">After Drying</p>
+                      <p className="text-2xl font-bold text-slate-900">4.5 kg</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-500 uppercase">Pure Saffron</p>
+                      <p className="text-2xl font-bold text-red-600">46 grams</p>
+                    </div>
+                    <p className="text-xs text-slate-500 italic mt-4">Yield within expected biological norms for Year-1</p>
+                  </div>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                  <h3 className="text-lg font-bold text-slate-900 mb-4">Location & Land</h3>
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <p className="text-slate-500">Location</p>
+                      <p className="font-medium text-slate-900">Ayun, Chitral</p>
+                    </div>
+                    <div>
+                      <p className="text-slate-500">Access Route</p>
+                      <p className="font-medium text-slate-900">Main Der – Chitral Road</p>
+                    </div>
+                    <div>
+                      <p className="text-slate-500">Active Cultivation</p>
+                      <p className="font-medium text-slate-900">15 kanal</p>
+                    </div>
+                    <div>
+                      <p className="text-slate-500">Total Available Land</p>
+                      <p className="font-medium text-red-600">100 kanal</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project Video */}
+              <div className="mb-12">
+                <h3 className="text-xl font-bold text-slate-900 mb-6">Project Overview Video</h3>
+                <div className="max-w-3xl mx-auto">
+                  <div className="relative rounded-xl overflow-hidden border border-slate-200 shadow-lg">
+                    <video
+                      controls
+                      className="w-full h-auto"
+                      poster="/assets/saffron flower.jpeg"
+                    >
+                      <source src="/assets/saffron-project-video.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              {/* Technical Context */}
+              <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-xl border border-red-200 mb-12">
+                <h3 className="text-xl font-bold text-slate-900 mb-4">Technical Context: Biological Crop Cycle</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <p className="text-slate-700 mb-4">Saffron follows a natural maturity cycle where yield increases significantly over time:</p>
+                    <ul className="space-y-2 text-sm text-slate-600">
+                      <li className="flex items-start">
+                        <span className="font-bold text-red-600 mr-2">Year 1:</span>
+                        <span>Naturally low yield (establishment phase)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="font-bold text-red-600 mr-2">Year 2:</span>
+                        <span>Significant yield increase as bulbs multiply</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="font-bold text-red-600 mr-2">Year 3:</span>
+                        <span>Peak production as bulbs reach full maturity</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-6 rounded-lg">
+                    <h4 className="font-bold text-slate-900 mb-3">Key Strengths</h4>
+                    <ul className="space-y-2 text-sm text-slate-600">
+                      <li>• High-value, low-volume agricultural crop</li>
+                      <li>• Easy storage and transport characteristics</li>
+                      <li>• Returns improve over time (biological multiplication)</li>
+                      <li>• Minimal recurring intervention after establishment</li>
+                      <li>• 5-year cultivation horizon with continuous re-cultivation</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Agronomic Activities */}
+              <div className="mb-12">
+                <h3 className="text-xl font-bold text-slate-900 mb-6">Agronomic Activities Completed</h3>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                  <div className="bg-white p-5 rounded-xl border border-slate-200 text-center">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Sprout className="w-6 h-6 text-green-600" />
+                    </div>
+                    <h4 className="font-bold text-slate-900 mb-2">Land Preparation</h4>
+                    <p className="text-sm text-slate-600">Bush clearing for clean growth environment</p>
+                  </div>
+                  <div className="bg-white p-5 rounded-xl border border-slate-200 text-center">
+                    <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Scale className="w-6 h-6 text-amber-600" />
+                    </div>
+                    <h4 className="font-bold text-slate-900 mb-2">Fertilization</h4>
+                    <p className="text-sm text-slate-600">Applied according to crop requirements</p>
+                  </div>
+                  <div className="bg-white p-5 rounded-xl border border-slate-200 text-center">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Leaf className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <h4 className="font-bold text-slate-900 mb-2">Protective Sprays</h4>
+                    <p className="text-sm text-slate-600">Applied to support plant health</p>
+                  </div>
+                  <div className="bg-white p-5 rounded-xl border border-slate-200 text-center">
+                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Users className="w-6 h-6 text-purple-600" />
+                    </div>
+                    <h4 className="font-bold text-slate-900 mb-2">Field Monitoring</h4>
+                    <p className="text-sm text-slate-600">Continuous care throughout season</p>
+                  </div>
                 </div>
               </div>
 
@@ -241,6 +392,146 @@ const Agriculture: React.FC<AgricultureProps> = ({ initialTab = 'saffron' }) => 
                       <div className="aspect-square rounded-lg overflow-hidden border border-slate-200">
                         <img src="/assets/plant2.jpeg" alt="Purity" className="w-full h-full object-cover" />
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Technical Cultivation Details */}
+              <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-sm mb-12">
+                <h3 className="text-2xl font-bold text-slate-900 mb-6">Technical Details – Saffron Cultivation</h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="font-bold text-slate-900 mb-3 flex items-center">
+                      <Thermometer className="w-5 h-5 mr-2 text-red-600" />
+                      Climate Requirements
+                    </h4>
+                    <ul className="space-y-2 text-sm text-slate-600 mb-6">
+                      <li>• Temperate climate with hot, dry summers and cold winters</li>
+                      <li>• Ideal growing temperature: 15°C – 30°C</li>
+                      <li>• Winter tolerance: down to –5°C (with frost protection)</li>
+                      <li>• Annual rainfall: 300–400 mm</li>
+                      <li>• Full sunlight required (6–8 hours daily)</li>
+                    </ul>
+
+                    <h4 className="font-bold text-slate-900 mb-3">Soil Conditions</h4>
+                    <ul className="space-y-2 text-sm text-slate-600 mb-6">
+                      <li>• Well-drained loamy or sandy-loam soil</li>
+                      <li>• pH range: 6.0 – 8.0</li>
+                      <li>• Avoid waterlogging; raised beds/slopes preferred</li>
+                    </ul>
+
+                    <h4 className="font-bold text-slate-900 mb-3">Land Preparation</h4>
+                    <ul className="space-y-2 text-sm text-slate-600 mb-6">
+                      <li>• Deep plowing (20–30 cm)</li>
+                      <li>• Organic compost or manure before planting</li>
+                      <li>• Complete weed removal</li>
+                    </ul>
+
+                    <h4 className="font-bold text-slate-900 mb-3">Irrigation</h4>
+                    <ul className="space-y-2 text-sm text-slate-600">
+                      <li>• Light irrigation after planting</li>
+                      <li>• Minimal watering during growth</li>
+                      <li>• Overwatering strictly avoided</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-slate-900 mb-3">Saffron Corm (Bulb) Specifications</h4>
+                    <ul className="space-y-2 text-sm text-slate-600 mb-6">
+                      <li>• Healthy, disease-free corms</li>
+                      <li>• Minimum weight: 8–10 grams</li>
+                      <li>• Planting depth: 10–15 cm</li>
+                      <li>• Row spacing: 15–20 cm</li>
+                      <li>• Corm spacing: 10–15 cm</li>
+                    </ul>
+
+                    <h4 className="font-bold text-slate-900 mb-3">Fertilization</h4>
+                    <ul className="space-y-2 text-sm text-slate-600 mb-6">
+                      <li>• Organic manure pre-planting</li>
+                      <li>• Phosphorus & Potassium during growth</li>
+                      <li>• Avoid excessive nitrogen</li>
+                    </ul>
+
+                    <h4 className="font-bold text-slate-900 mb-3">Pest & Disease Management</h4>
+                    <ul className="space-y-2 text-sm text-slate-600 mb-6">
+                      <li>• Pests: rodents, mites, nematodes</li>
+                      <li>• Diseases: fusarium wilt, corm rot, rust</li>
+                      <li>• Prevention via crop rotation, drainage, healthy corms</li>
+                    </ul>
+
+                    <h4 className="font-bold text-slate-900 mb-3">Harvesting & Post-Harvest</h4>
+                    <ul className="space-y-2 text-sm text-slate-600">
+                      <li>• Flowering: October–November</li>
+                      <li>• Manual stigma harvesting (early morning)</li>
+                      <li>• Drying at 30–35°C in ventilated shade</li>
+                      <li>• Airtight storage away from light & moisture</li>
+                      <li>• Shelf life: 2–3 years</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-slate-200">
+                  <h4 className="font-bold text-slate-900 mb-3">Yield Expectation (Agronomic)</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="bg-red-50 p-4 rounded-lg">
+                      <p className="text-xs text-slate-500 uppercase mb-1">Average Yield</p>
+                      <p className="text-xl font-bold text-red-600">1–5 kg/hectare</p>
+                      <p className="text-xs text-slate-600 mt-1">Dried saffron</p>
+                    </div>
+                    <div className="bg-amber-50 p-4 rounded-lg">
+                      <p className="text-xs text-slate-500 uppercase mb-1">Labor Intensity</p>
+                      <p className="text-xl font-bold text-amber-600">High</p>
+                      <p className="text-xs text-slate-600 mt-1">Manual harvesting required</p>
+                    </div>
+                    <div className="bg-blue-50 p-4 rounded-lg">
+                      <p className="text-xs text-slate-500 uppercase mb-1">Replanting Cycle</p>
+                      <p className="text-xl font-bold text-blue-600">4–5 years</p>
+                      <p className="text-xs text-slate-600 mt-1">Recommended interval</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Team & Contact */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-xl text-white">
+                  <h3 className="text-xl font-bold mb-4">Team & Organizational Strengths</h3>
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-start">
+                      <span className="text-emerald-400 mr-2">✓</span>
+                      <span>Highly skilled and trained agricultural team</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-emerald-400 mr-2">✓</span>
+                      <span>Strong local relationship with Chitral region</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-emerald-400 mr-2">✓</span>
+                      <span>Proven on-ground farming experience (5 years)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-emerald-400 mr-2">✓</span>
+                      <span>Successful execution history</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">Contact Information</h3>
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <p className="text-slate-500">Email</p>
+                      <p className="font-medium text-slate-900">info@inifinitemindpower.co</p>
+                    </div>
+                    <div>
+                      <p className="text-slate-500">Phone</p>
+                      <p className="font-medium text-slate-900">0332-3274084</p>
+                    </div>
+                    <div>
+                      <p className="text-slate-500">Location</p>
+                      <p className="font-medium text-slate-900">Chitral, Pakistan</p>
                     </div>
                   </div>
                 </div>

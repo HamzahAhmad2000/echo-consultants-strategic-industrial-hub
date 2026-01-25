@@ -79,8 +79,8 @@ const Platinum: React.FC = () => {
 
               <div className="relative rounded-2xl overflow-hidden min-h-[300px] border border-slate-200 shadow-md">
                 <img
-                  src="/assets/fields (2).jpeg"
-                  alt="Geological Survey Site"
+                  src="/assets/WhatsApp Image 2026-01-06 at 11.50.11 PM (2).jpeg"
+                  alt="Platinum Group Metals Site"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent"></div>
