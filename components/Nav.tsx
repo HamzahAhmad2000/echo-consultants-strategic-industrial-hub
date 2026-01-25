@@ -52,13 +52,14 @@ const Nav: React.FC<NavProps> = ({ activePage, onNavigate }) => {
                   Strategic
                   <ChevronDown className={`w-4 h-4 transition-transform ${strategicOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                 {strategicOpen && (
                   <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-slate-200 rounded-lg shadow-lg py-2 z-50">
                     {strategicItems.map((item) => (
                       <button
                         key={item.id}
-                        onClick={() => {
+                        onMouseDown={(e) => {
+                          e.preventDefault(); // Prevent focus loss on the trigger button
                           onNavigate(item.id);
                           setStrategicOpen(false);
                         }}
